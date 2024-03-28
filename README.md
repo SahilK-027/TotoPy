@@ -43,3 +43,75 @@ console.log("After swapping:");
 console.log("a =", a);
 console.log("b =", b);
 ```
+
+## 🟣 Problem 2: How to declare and use HashMap?
+Solution 1: Using dict
+```python
+# Declaring and using a HashMap in Python
+hash_map = {}
+hash_map['key1'] = 'value1'
+hash_map['key2'] = 'value2'
+
+# Accessing values
+print(hash_map['key1'])  # Output: value1
+print(hash_map.get('key2'))  # Output: value2
+
+# Iterating over key-value pairs
+for key, value in hash_map.items():
+    print(key, value)
+```
+
+Solution 2: Using defaultdict
+In Python is also a valid and efficient approach for managing key-value pairs, especially in cases where you want default values for keys that haven't been explicitly set. However, for the purpose of competitive programming and simplicity, using a standard dictionary (dict) is often preferred because it requires less code and is easier to understand at a glance.
+
+```python
+from collections import defaultdict
+
+# Declaring and using a defaultdict in Python
+hash_map = defaultdict(lambda: 'default_value')
+hash_map['key1'] = 'value1'
+hash_map['key2'] = 'value2'
+
+# Accessing values
+print(hash_map['key1'])  # Output: value1
+print(hash_map['key3'])  # Output: default_value
+
+# Iterating over key-value pairs
+for key, value in hash_map.items():
+    print(key, value)
+```
+#### ♻ Solutions in other languages
+1) C++
+```cpp
+unordered_map<string, string> hash_map;
+hash_map["key1"] = "value1";
+hash_map["key2"] = "value2";
+
+// Accessing values
+cout << hash_map["key1"] << endl;  // Output: value1
+cout << hash_map["key2"] << endl;  // Output: value2
+
+// Iterating over key-value pairs
+for (auto& pair : hash_map) {
+  cout << pair.first << " " << pair.second << endl;
+}
+```
+
+2) JavaScript
+```js
+// Declaring and using a HashMap in JavaScript
+let hash_map = {};
+hash_map['key1'] = 'value1';
+hash_map['key2'] = 'value2';
+
+// Accessing values
+console.log(hash_map['key1']);  // Output: value1
+console.log(hash_map['key2']);  // Output: value2
+
+// Iterating over key-value pairs
+for (let key in hash_map) {
+    if (hash_map.hasOwnProperty(key)) {
+        console.log(key, hash_map[key]);
+    }
+}
+```
