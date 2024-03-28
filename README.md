@@ -176,7 +176,6 @@ let wordsArray = str.split(' ');
 console.log(wordsArray);
 ```
 
-
 ## 🟣 Problem 4: Converting a list to a string
 In Python, converting a list of elements into a single string can be done using the `join()` method. 
 ```py
@@ -208,4 +207,43 @@ let my_array = ['Hello', 'world', '2024'];
 let my_string = my_array.join(' ');
 
 console.log(my_string);  // Output: Hello world 2024
+```
+
+## 🟣 Problem 5: Reverse list or String
+
+1) **Using Slicing**
+```py
+my_list = [1, 2, 3, 4, 5]
+reversed_list = my_list[::-1]
+
+print(reversed_list)  # Output: [5, 4, 3, 2, 1]
+```
+
+2) **Using `reversed()` method**
+```py
+my_list = [1, 2, 3, 4, 5]
+reversed_list = list(reversed(my_list))
+
+print(reversed_list)  # Output: [5, 4, 3, 2, 1]
+```
+
+> __Note__
+> Same is applicable for strings
+
+#### ♻ Solutions in other languages
+1) C++
+```cpp
+vector<int> arr = {1,2,3,4,5};
+reverse(arr.begin(), arr.end());
+for(auto i: arr){
+    cout<<i<<" ";
+}
+```
+
+2) JavaScript
+```js
+let myString = "Hello, world!";
+let reversedString = myString.split('').reverse().join('');
+
+console.log(reversedString);  // Output: "!dlrow ,olleH"
 ```
