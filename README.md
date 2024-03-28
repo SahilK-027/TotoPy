@@ -1,5 +1,5 @@
 # TotoPy
-Let's learn Python...🐍
+Let's learn Python for CP and Problem-Solving...🐍
 
 
 TotoPy is a repository aimed at comparing solutions across multiple programming languages, with a primary focus on Python3. 
