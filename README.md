@@ -115,3 +115,59 @@ for (let key in hash_map) {
     }
 }
 ```
+
+## 🟣 Problem 3: Converting string to list
+In Python strings are immutable so to use and make changes in them we need to convert it to a list. 
+
+1) Converting character by character:  **Using list comprehension**
+```python
+# String to be converted to a list
+string = "Hello, world!"
+
+# Using list comprehension to convert string to list of characters
+char_list = [char for char in string]
+print(char_list)  # Output: ['H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd', '!']
+```
+
+2) Splitting based on separator: **Using `split()` method**
+```python
+# String to be converted to a list
+string = "Hello, world! This is a string."
+
+# Using split() method to convert string to list based on space delimiter
+word_list = string.split()
+print(word_list)  # Output: ['Hello,', 'world!', 'This', 'is', 'a', 'string.']
+
+# Using split() with a custom delimiter (comma in this case)
+custom_list = string.split(',')
+print(custom_list)  # Output: ['Hello', ' world! This is a string.']
+```
+
+#### ♻ Solutions in other languages
+1) C++
+```cpp
+string str = "Hello, world!";
+vector<char> charArray(str.begin(), str.end());
+
+// Print the array of characters
+for (char ch: charArray) {
+    cout << ch << " ";
+}
+cout << endl;
+```
+
+2) JavaScript
+```js
+// String to Array of Characters
+let str = "Hello, world!";
+let charArray = Array.from(str);
+
+// Print the array of characters
+console.log(charArray);
+
+// String to Array of Words (splitting by space)
+let wordsArray = str.split(' ');
+
+// Print the array of words
+console.log(wordsArray);
+```
