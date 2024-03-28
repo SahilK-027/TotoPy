@@ -126,6 +126,10 @@ string = "Hello, world!"
 
 # Using list comprehension to convert string to list of characters
 char_list = [char for char in string]
+
+# Method 2 list() method
+char_list = list(string)
+
 print(char_list)  # Output: ['H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd', '!']
 ```
 
@@ -170,4 +174,38 @@ let wordsArray = str.split(' ');
 
 // Print the array of words
 console.log(wordsArray);
+```
+
+
+## 🟣 Problem 4: Converting a list to a string
+In Python, converting a list of elements into a single string can be done using the `join()` method. 
+```py
+# List of elements
+my_list = ['Hello', 'world', 'this', 'is', 'a', 'list']
+
+# Convert list to string using join() method
+my_string = ' '.join(my_list)
+
+print(my_string)
+```
+#### ♻ Solutions in other languages
+1) C++
+```cpp
+vector<string> v = {"hello", "world"};
+string str = "";
+for(auto i: v){
+    str += i;
+}
+cout<<str<<endl;
+```
+
+2) JavaScript
+```js
+// Converting an array to a string in JavaScript
+let my_array = ['Hello', 'world', '2024'];
+
+// Using join() method to concatenate array elements into a string
+let my_string = my_array.join(' ');
+
+console.log(my_string);  // Output: Hello world 2024
 ```
