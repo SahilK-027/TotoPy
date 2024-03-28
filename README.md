@@ -228,7 +228,7 @@ print(reversed_list)  # Output: [5, 4, 3, 2, 1]
 ```
 
 > __Note__
-> Same is applicable for strings
+> The same applies to strings
 
 #### ♻ Solutions in other languages
 1) C++
@@ -247,3 +247,32 @@ let reversedString = myString.split('').reverse().join('');
 
 console.log(reversedString);  // Output: "!dlrow ,olleH"
 ```
+
+## 🟣 Problem 5: Sorting 
+The `sort()` method sorts the list ascending by default.
+```py
+list.sort(reverse=True|False, key=myFunc)
+```
+> __Note__
+> The same applies to strings
+
+#### ♻ Solutions in other languages
+1) C++
+```cpp
+vector<int> arr = {1,2,3,4,5};
+sort(arr.begin(), arr.end()); OR sort(arr.begin(), arr.end(), greater<int>());
+for(auto i: arr){
+    cout<<i<<" ";
+}
+```
+
+2) JavaScript
+```js
+let myString = "Hello, world!";
+let sortedString = myString.sort();
+
+console.log(sortedString);
+```
+
+> __Note__
+> The sort() method overwrites the original array
