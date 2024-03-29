@@ -276,3 +276,29 @@ console.log(sortedString);
 
 > __Note__
 > The sort() method overwrites the original array
+
+## 🟣 Problem 6: Ternary operator
+Python has a ternary operator syntax that allows you to write conditional expressions concisely. The syntax is:
+```py
+x if condition else y
+```
+```py
+age = 20
+message = "You are eligible" if age >= 18 else "You are not eligible"
+print(message)
+```
+
+#### ♻ Solutions in other languages
+1) C++
+```cpp
+int age = 20;
+string message = (age >= 18) ? "You are eligible": "You are not eligible";
+cout << message << endl;
+```
+
+2) JavaScript
+```js
+let age = 20;
+let message = (age >= 18) ? "You are eligible": "You are not eligible";
+console.log(message);
+```
