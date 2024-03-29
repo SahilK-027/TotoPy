@@ -302,3 +302,30 @@ let age = 20;
 let message = (age >= 18) ? "You are eligible": "You are not eligible";
 console.log(message);
 ```
+
+## 🟣 Problem 7: Declare a list of predefined size n
+```py
+n = 10
+list = [0] * n
+# This will create list of size n filled with 0s
+```
+
+#### ♻ Solutions in other languages
+1) C++
+```cpp
+vector<int> list(n,0);
+```
+
+2) JavaScript
+```js
+var n = 5; // Or any other desired size
+var list = new Array(n).fill(0);
+```
+OR
+```js
+var n = 5; // Or any other desired size
+var list = [];
+for (var i = 0; i < n; i++) {
+    list.push(0);
+}
+```
