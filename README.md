@@ -307,7 +307,7 @@ console.log(message);
 ```py
 n = 10
 list = [0] * n
-# This will create list of size n filled with 0s
+# This will create a list of size n filled with 0s
 ```
 
 #### ♻ Solutions in other languages
@@ -328,4 +328,26 @@ var list = [];
 for (var i = 0; i < n; i++) {
     list.push(0);
 }
+```
+
+## 🟣 Problem 8: Reverse range to iterate over an array
+```py
+array = [1, 2, 3, 4, 5]
+
+# Iterate over the array in reverse order
+for i in range(len(array) - 1, -1, -1):
+    print(array[i])
+```
+
+OR
+```py
+for n in reversed(range(5)):
+    print(n)
+ 
+# output:
+# 4
+# 3
+# 2
+# 1
+# 0
 ```
