@@ -22,7 +22,7 @@ print("After swapping:")
 print("a =", a)
 print("b =", b)
 ```
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++:
 ```cpp
 int a = 10;
@@ -80,7 +80,7 @@ print(hash_map['key3'])  # Output: default_value
 for key, value in hash_map.items():
     print(key, value)
 ```
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++
 ```cpp
 unordered_map<string, string> hash_map;
@@ -147,7 +147,7 @@ custom_list = string.split(',')
 print(custom_list)  # Output: ['Hello', ' world! This is a string.']
 ```
 
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++
 ```cpp
 string str = "Hello, world!";
@@ -187,7 +187,7 @@ my_string = ' '.join(my_list)
 
 print(my_string)
 ```
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++
 ```cpp
 vector<string> v = {"hello", "world"};
@@ -230,7 +230,7 @@ print(reversed_list)  # Output: [5, 4, 3, 2, 1]
 > __Note__
 > The same applies to strings
 
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++
 ```cpp
 vector<int> arr = {1,2,3,4,5};
@@ -256,7 +256,7 @@ list.sort(reverse=True|False, key=myFunc)
 > __Note__
 > The same applies to strings
 
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++
 ```cpp
 vector<int> arr = {1,2,3,4,5};
@@ -288,7 +288,7 @@ message = "You are eligible" if age >= 18 else "You are not eligible"
 print(message)
 ```
 
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++
 ```cpp
 int age = 20;
@@ -310,7 +310,7 @@ list = [0] * n
 # This will create a list of size n filled with 0s
 ```
 
-#### ♻ Solutions in other languages
+#### ♻ How do we do it in other languages?
 1) C++
 ```cpp
 vector<int> list(n,0);
@@ -350,4 +350,55 @@ for n in reversed(range(5)):
 # 2
 # 1
 # 0
+```
+
+## 🟣 Problem 9: Get length of map
+```py
+unorderedMap = defaultdict(lambda: 0)
+length = len(unorderedMap)
+```
+#### ♻ How do we do it in other languages?
+1) C++
+```cpp
+unordered_map<int, int>unorderedMap;
+length = unorderedMap.size()
+```
+
+2) JavaScript
+```js
+let unorderedMap = {};
+let length = Object.keys(unorderedMap).length;
+```
+OR
+```js
+let unorderedMap = new Map();
+let length = unorderedMap.size;
+```
+
+
+## 🟣 Problem 10: Erase element from the map
+```py
+unorderedMap = defaultdict(lambda: 0)
+unorderedMap[10] += 2
+unorderedMap.pop(10)
+```
+#### ♻ How do we do it in other languages?
+1) C++
+```cpp
+unordered_map<int, int>unorderedMap;
+unorderedMap[10] += 2
+unorderedMap.erase(10
+```
+
+2) JavaScript
+```js
+let unorderedMap = {};
+unorderedMap[10] = (unorderedMap[10] || 0) + 2;
+delete unorderedMap[10];
+```
+OR
+```js
+let unorderedMap = new Map();
+unorderedMap.set(10, (unorderedMap.get(10) || 0) + 2);
+unorderedMap.delete(10);
 ```
