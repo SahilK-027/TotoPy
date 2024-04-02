@@ -21,6 +21,7 @@ Contributors are encouraged to add content related to their favourite languages,
 - [Problem 9: Reverse Range for Array Iteration](#problem-9-reverse-range-for-array-iteration)
 - [Problem 10: Getting Length of a Map](#problem-10-getting-length-of-a-map)
 - [Problem 11: Erasing Elements from a Map](#problem-11-erasing-elements-from-a-map)
+- [Problem 12: Python zip() Function](#problem-12-Python-zip-Function)
 
 ## 🟣 Problem 1: How to swap two variables in Python3 <a name="problem-1-swapping-two-variables"></a>
 #### ✅ Best Method: Using Tuple Unpacking
@@ -389,7 +390,6 @@ let unorderedMap = new Map();
 let length = unorderedMap.size;
 ```
 
-
 ## 🟣 Problem 11: Erase element from the map <a name="problem-11-erasing-elements-from-a-map"></a>
 ```py
 unorderedMap = defaultdict(lambda: 0)
@@ -415,4 +415,80 @@ OR
 let unorderedMap = new Map();
 unorderedMap.set(10, (unorderedMap.get(10) || 0) + 2);
 unorderedMap.delete(10);
+```
+
+
+## 🟣 Problem 12: Python `zip()` function <a name="problem-12-Python-zip-Function"></a>
+The zip() function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator is paired together etc.
+
+If the passed iterables have different lengths, the iterable with the least items decides the length of the new iterator.
+```py
+a = ("Johnny", "Keira", "Orlando")
+b = ("Depp", "Knightley", "Bloom", "Angelica")
+x = zip(a, b)
+#use the list() function to display a readable version of the result:
+print(list(x))
+
+# Output: [('Johnny', 'Depp'), ('Keira', 'Knightley'), ('Orlando', 'Bloom')]
+```
+
+#### Use case: Detect Isomorphic Strings
+Given two strings s and t, determine if they are isomorphic.
+
+Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+
+All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+
+Example 1:
+```
+Input: s = "egg", t = "add"
+Output: true
+```
+
+Example 2:
+```
+Input: s = "foo", t = "bar"
+Output: false
+```
+
+Solution: 
+```py
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        return len(set(zip(s, t))) == len(set(s)) == len(set(t)) == len(set(zip(t, s)))
+```
+
+An alternate CPP solution is like this:
+```cpp
+class Solution {
+private:
+    bool solve(string& s, string& t, int& n){
+        unordered_map<char, char> characterDict;
+        for(int i = 0; i < n; i++){
+            if(characterDict.find(s[i]) != characterDict.end()){
+                // Already mapped
+                char oldMapping = characterDict[s[i]];
+                char newChar = t[i];
+                if(oldMapping != newChar){
+                    return false;
+                }
+            }
+            else{
+                characterDict[s[i]] = t[i];
+            }
+        }
+        return true;
+    }
+public:
+    bool isIsomorphic(string s, string t) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(0); cout.tie(0);
+        
+        int n = s.size();
+        bool sTOt = solve(s, t, n);
+        bool tTOs = solve(t, s, n);
+
+        return sTOt && tTOs;
+    }
+};
 ```
