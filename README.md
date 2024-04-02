@@ -8,7 +8,21 @@ The repository includes implementations of common programming tasks and challeng
 
 Contributors are encouraged to add content related to their favourite languages, such as Java, Rust, Go, or any other fostering a diverse collection of solutions and learning across various programming Languages.
 
-## 🟣 Problem 1: How to swap two variables in Python3
+
+## Table of Contents
+- [Problem 1: Swapping Two Variables](#problem-1-swapping-two-variables)
+- [Problem 2: Using HashMap](#problem-2-using-hashmap)
+- [Problem 3: Converting String to List](#problem-3-converting-string-to-list)
+- [Problem 4: Converting List to String](#problem-4-converting-list-to-string)
+- [Problem 5: Reversing List or String](#problem-5-reversing-list-or-string)
+- [Problem 6: Sorting](#problem-6-sorting)
+- [Problem 7: Ternary Operator](#problem-7-ternary-operator)
+- [Problem 8: Declaring a List of Predefined Size](#problem-8-declaring-a-list-of-predefined-size)
+- [Problem 9: Reverse Range for Array Iteration](#problem-9-reverse-range-for-array-iteration)
+- [Problem 10: Getting Length of a Map](#problem-10-getting-length-of-a-map)
+- [Problem 11: Erasing Elements from a Map](#problem-11-erasing-elements-from-a-map)
+
+## 🟣 Problem 1: How to swap two variables in Python3 <a name="problem-1-swapping-two-variables"></a>
 #### ✅ Best Method: Using Tuple Unpacking
 ```python
 # Initial values
@@ -44,7 +58,7 @@ console.log("a =", a);
 console.log("b =", b);
 ```
 
-## 🟣 Problem 2: How to declare and use HashMap?
+## 🟣 Problem 2: How to declare and use HashMap? <a name="problem-2-using-hashmap"></a>
 Solution 1: Using dict
 ```python
 # Declaring and using a HashMap in Python
@@ -116,7 +130,7 @@ for (let key in hash_map) {
 }
 ```
 
-## 🟣 Problem 3: Converting string to list
+## 🟣 Problem 3: Converting string to list <a name="problem-3-converting-string-to-list"></a>
 In Python strings are immutable so to use and make changes in them we need to convert it to a list. 
 
 1) Converting character by character:  **Using list comprehension**
@@ -176,7 +190,7 @@ let wordsArray = str.split(' ');
 console.log(wordsArray);
 ```
 
-## 🟣 Problem 4: Converting a list to a string
+## 🟣 Problem 4: Converting a list to a string <a name="problem-4-converting-list-to-string"></a>
 In Python, converting a list of elements into a single string can be done using the `join()` method. 
 ```py
 # List of elements
@@ -209,7 +223,7 @@ let my_string = my_array.join(' ');
 console.log(my_string);  // Output: Hello world 2024
 ```
 
-## 🟣 Problem 5: Reverse list or String
+## 🟣 Problem 5: Reverse list or String <a name="problem-5-reversing-list-or-string"></a>
 
 1) **Using Slicing**
 ```py
@@ -248,7 +262,7 @@ let reversedString = myString.split('').reverse().join('');
 console.log(reversedString);  // Output: "!dlrow ,olleH"
 ```
 
-## 🟣 Problem 5: Sorting 
+## 🟣 Problem 6: Sorting <a name="problem-6-sorting"></a>
 The `sort()` method sorts the list ascending by default.
 ```py
 list.sort(reverse=True|False, key=myFunc)
@@ -277,7 +291,7 @@ console.log(sortedString);
 > __Note__
 > The sort() method overwrites the original array
 
-## 🟣 Problem 6: Ternary operator
+## 🟣 Problem 7: Ternary operator <a name="problem-7-ternary-operator"></a>
 Python has a ternary operator syntax that allows you to write conditional expressions concisely. The syntax is:
 ```py
 x if condition else y
@@ -303,7 +317,7 @@ let message = (age >= 18) ? "You are eligible": "You are not eligible";
 console.log(message);
 ```
 
-## 🟣 Problem 7: Declare a list of predefined size n
+## 🟣 Problem 8: Declare a list of predefined size n <a name="problem-8-declaring-a-list-of-predefined-size"></a>
 ```py
 n = 10
 list = [0] * n
@@ -330,7 +344,7 @@ for (var i = 0; i < n; i++) {
 }
 ```
 
-## 🟣 Problem 8: Reverse range to iterate over an array
+## 🟣 Problem 9: Reverse range to iterate over an array <a name="problem-9-reverse-range-for-array-iteration"></a>
 ```py
 array = [1, 2, 3, 4, 5]
 
@@ -352,7 +366,7 @@ for n in reversed(range(5)):
 # 0
 ```
 
-## 🟣 Problem 9: Get length of map
+## 🟣 Problem 10: Get length of map <a name="problem-10-getting-length-of-a-map"></a>
 ```py
 unorderedMap = defaultdict(lambda: 0)
 length = len(unorderedMap)
@@ -376,7 +390,7 @@ let length = unorderedMap.size;
 ```
 
 
-## 🟣 Problem 10: Erase element from the map
+## 🟣 Problem 11: Erase element from the map <a name="problem-11-erasing-elements-from-a-map"></a>
 ```py
 unorderedMap = defaultdict(lambda: 0)
 unorderedMap[10] += 2
